@@ -33,9 +33,15 @@ class Rbac
        //读取rbac配置文件，是否开启了权限验证
        if($this->ci_obj->config->item('rbac_auth_on'))
        {
+       	  //如果当前的控制器/方法 不在不需要验证的目录控制器/方法列表中
           if(!in_array($directory,$this->ci_obj->config->item('rbac_notauth_dirc')))
           {
-          
+             //验证是否登录
+             if(!rbac_conf(array('INFO','id')))
+             {
+                 error_redirct($this->ci_obj->config->item('rbac_auth_gateway'),"请先登录！");
+			     die();
+             }
           }
        }
      }
