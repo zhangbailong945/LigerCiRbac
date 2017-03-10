@@ -12,5 +12,15 @@ class Administrator extends CI_Controller
       $this->load->view('administrator/index');
     }
     
+    public function redirect()
+    {
+      $this->load->view('administrator/redirect');
+    }
+    
+    public function login()
+    {
+      $this->load->view('administrator/login');
+    }
+    
     
 }

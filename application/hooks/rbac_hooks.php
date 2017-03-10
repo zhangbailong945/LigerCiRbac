@@ -6,6 +6,7 @@ class Rbac
   {
      $this->ci_obj=&get_instance();
      $this->ci_obj->load->config('rbac');
+     $this->ci_obj->load->helper(array('rbac','url'));
      if(isset($this->ci_obj->view_override))
      {
      	  //默认重写视图
