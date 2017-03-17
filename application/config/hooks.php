@@ -20,3 +20,20 @@ $hook['post_controller_constructor'] = array(
 		'filepath' => 'hooks',
 		'params'   => '',
 );
+
+$hook['display_override'] = array(
+		'class'    => 'Rbac',
+		'function' => 'view_override',
+		'filename' => 'rbac_hook.php',
+		'filepath' => 'hooks',
+		'params'   => '',
+);
+
+//默认开启SESSION
+$hook['pre_system'] = array(
+		'class'    => '',
+		'function' => 'session_start',
+		'filename' => '',
+		'filepath' => '',
+		'params'   => '',
+);

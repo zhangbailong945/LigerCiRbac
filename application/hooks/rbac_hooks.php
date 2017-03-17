@@ -43,6 +43,10 @@ class Rbac
                  error_redirct($this->ci_obj->config->item('rbac_auth_gateway'),"请先登录！");
 			     die();
              }
+             else
+             {
+                echo "已经登录。";
+             }
           }
        }
      }
