@@ -22,10 +22,7 @@ class Administrator extends CI_Controller
       }
     }
     
-    public function redirect()
-    {
-      $this->load->view('administrator/redirect');
-    }
+
     
     public function login()
     {
@@ -37,7 +34,7 @@ class Administrator extends CI_Controller
       {
          //检测用户状态
          $status=$this->rbac_model->check_user($username,md5($password));
-         if($status==true)
+         if($status===TRUE)
          {
             success_redirect($this->config->item('rbac_default_index'),'登录成功！');
          }

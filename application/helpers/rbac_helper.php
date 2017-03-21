@@ -119,7 +119,7 @@ if(!function_exists('success_redirect'))
         $data['time']=$time;
         $data['type']='success';
         $data['contents']=$content;
-        $ci_obj->load->view('redirect',$data);
+        $ci_obj->load->view('administrator/redirect',$data);
         $ci_obj->output->_display($ci_obj->output->get_output());
         die();
     }
