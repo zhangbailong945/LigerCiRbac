@@ -18,7 +18,6 @@
     <script src="<?php echo $plugins;?>/jquery-validation/messages_cn.js" type="text/javascript"></script>
     <script src="<?php echo $plugins;?>/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
         <script type="text/javascript">
- 
             var tab = null;
             var accordion = null;
             var tree = null;

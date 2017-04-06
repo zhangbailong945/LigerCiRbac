@@ -9,6 +9,7 @@ class Administrator extends CI_Controller
     //进入后台主页视图
     public function index()
     {
+     echo rbac_conf(array('INFO','id'));
       //判断是否有用户配置信息
       if(!rbac_conf(array('INFO','id')))
       {
@@ -34,6 +35,7 @@ class Administrator extends CI_Controller
       {
          //检测用户状态
          $status=$this->rbac_model->check_user($username,md5($password));
+
          if($status===TRUE)
          {
             success_redirect($this->config->item('rbac_default_index'),'登录成功！');

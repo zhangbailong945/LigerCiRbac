@@ -12,10 +12,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 //是否开启
 $config['flag'] = FALSE;
-$config = array(
-	'default' => array(
-		'hostname' => '127.0.0.1',
-		'port'     => '11211',
-		'weight'   => '1',
-	),
-);
+//memcached权限验证
+$config['config'] = array(
+               'servers' => array('localhost'),
+               'debug'   => false
+             );
